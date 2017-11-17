@@ -1,0 +1,62 @@
+.navbar{
+    height: 70px;
+}
+.navbar-brand
+{
+    font-size: 2em;
+    padding-right: 50px;
+}
+.nav-item
+{
+    padding:10px 20px;
+    font-size: 1.2em;
+    font-style: bold;
+}
+.main{
+    padding-top:25px;
+    background: #FAF0E6;    
+}
+body{
+    background: #FAF0E6;        
+}
+.card {
+    margin-bottom: 20px;
+}
+.ReactPasswordStrength-strength-desc{
+    padding:10px 4px !important;
+    text-align: center !important;
+    right: 15px !important;
+}
+.ReactPasswordStrength-input{
+    padding:4px 10px !important;
+    border-radius: 5px;
+}
+.ReactPasswordStrength {
+    border:1px solid #ced4da;
+    border-radius:.25rem;
+}
+.register-login{
+    padding: 5% 25% 25% 25%;
+}
+.register-link {
+    text-align: right;
+}
+.error-message{
+    padding-top:2px;
+    color:red;
+}
+.btn-videos{
+    margin-top:8px;
+}
+.details{
+    padding-top:40px;
+}
+.button-buy{
+    margin: 0 15px;
+}
+.btn{
+    margin: 0 5px;
+}
+.video-form{
+    padding: 5% 20% 25% 20%;
+}

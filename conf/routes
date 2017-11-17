@@ -1,0 +1,44 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+
+#Directors
+GET /api/v1/directors                      controllers.DirectorController.getAllDirectors
+
+#Videos
+GET /api/v1/videos                         controllers.VideoController.getAllVideos
+GET /api/v1/video/:id                      controllers.VideoController.getVideo(id: Integer)
+DELETE /api/v1/video/delete/:id            controllers.VideoController.deleteVideo(id: Integer)
+
+#Movies
+GET /api/v1/movies                         controllers.MovieController.getAllMovies
+POST /api/v1/movie                         controllers.MovieController.createMovie
+PUT /api/v1/movie                          controllers.MovieController.editMovie
+
+#Tv shows
+GET /api/v1/tvShows                        controllers.TvShowController.getAllTvShows
+POST /api/v1/tvShow                        controllers.TvShowController.createTvShow
+PUT /api/v1/tvShow                         controllers.TvShowController.editTvShow
+
+#User
+GET /api/v1/user/checkMail/:email          controllers.UserController.emailIsExist(email: String)    
+POST /api/v1/user                          controllers.UserController.createUser
+
+#Purchased video
+GET /api/v1/videos/purchased               controllers.PurchasedVideoController.getAllPurchasedVideos
+GET /api/v1/videos/purchased/:id           controllers.PurchasedVideoController.getAllUserPurchasedVideos(id: Integer)
+POST /api/v1/video/purchase                controllers.PurchasedVideoController.createPurchasedVideo
+
+#Rented video
+GET /api/v1/videos/rented                  controllers.RentedVideoController.getAllRentedVideos
+GET /api/v1/videos/rented/:id              controllers.RentedVideoController.getAllUserRentedVideos(id: Integer)
+POST /api/v1/video/rent                    controllers.RentedVideoController.createRentedVideo
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file                      controllers.Assets.at(path="/public", file)
+GET     /assets/*file                      controllers.Assets.versioned(path="/public", file: Asset)
+GET /                                      controllers.Application.index(slug="")
+GET /*slug                                 controllers.Application.index(slug) 
